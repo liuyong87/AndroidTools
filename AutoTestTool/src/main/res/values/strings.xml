@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AutoTestTool</string>
+
+    <!--自动化测试主界面目录内容-->
+    <string name="auto_test_item_usb_switch_text">USB调试</string>
+    <string name="auto_test_item_catch_log_text">采集日志</string>
 </resources>

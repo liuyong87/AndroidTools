@@ -7,6 +7,8 @@ import com.semisky.autotesttool.R;
 
 public class AutoTestActivity extends Activity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

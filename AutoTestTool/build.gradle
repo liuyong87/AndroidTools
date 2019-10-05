@@ -17,10 +17,31 @@ android {
 
     }
 
+    signingConfigs {
+        semisky_release {
+            storeFile file("./semisky_jonhliu.jks")
+            storePassword '1234.semisky'
+            keyAlias 'semisky_jonhliu'
+            keyPassword '1234.semisky'
+        }
+        semisky_debug {
+            storeFile file("./semisky_jonhliu.jks")
+            storePassword '1234.semisky'
+            keyAlias 'semisky_jonhliu'
+            keyPassword '1234.semisky'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.semisky_debug
+        }
+        release {
+            signingConfig signingConfigs.semisky_release
         }
     }
 
@@ -36,4 +57,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.x.x'
 }

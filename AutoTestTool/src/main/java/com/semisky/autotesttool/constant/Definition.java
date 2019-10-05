@@ -2,6 +2,15 @@ package com.semisky.autotesttool.constant;
 
 public class Definition {
 
+    public static final String TAG_DEF = "*";
+    public static final String LOG_FILE_SUFFIX = ".log";
+    public static final String MCU_LOG_FILE_PREFIX =  "mcu_log_";
+    public static final String ANDROID_LOG_FILE_PREFIX =  "android_log_";
+    public static final String MCU_LOG_PATH = "/sdcard/log/mcu";
+    public static final String ANDROID_LOG_PATH = "/sdcard/log/android";
+    public static final String LOGCAT = "logcat ";
+
+
     /**
      * 日志格式化输出<br>
      *
@@ -35,7 +44,7 @@ public class Definition {
      * Main：所有java层的log，遗迹不属于上面3层的log
      * e.g.: logcat –b radio
      */
-    public class LocatBufferAear {
+    public class LogcatBufferAear {
         public static final String RADIO = "radio";
         public static final String SYSTEM = "system";
         public static final String EVENT = "event";
@@ -55,7 +64,7 @@ public class Definition {
      * -s: 设置过滤器
      * -v <format>: 设置输出格式的日志消息。默认是短暂的格式。支持的格式列表
      */
-    public class LocatOptions {
+    public class LogcatOptions {
         public static final String B = "-b";
         public static final String C = "-c";
         public static final String D = "-d";
@@ -82,11 +91,11 @@ public class Definition {
      * e.g.: logcat -v time aaa:I
      */
     public class LogcatPriority {
-        public static final String V = "V";
-        public static final String D = "D";
-        public static final String I = "I";
-        public static final String E = "E";
-        public static final String F = "F";
-        public static final String S = "S";
+        public static final String V = ":V";
+        public static final String D = ":D";
+        public static final String I = ":I";
+        public static final String E = ":E";
+        public static final String F = ":F";
+        public static final String S = ":S";
     }
 }

@@ -18,10 +18,15 @@ public abstract class BaseFragment<V,P extends BasePresenter<V>> extends Fragmen
     protected View mContentView;
     protected P mPresenter;
 
+    protected abstract void initData();
     protected abstract void initListeners();
     protected abstract void initViews();
     protected abstract P createPresenter();
     protected abstract int getLayoutResID();
+
+    protected boolean isBindPresenter(){
+        return (null != mPresenter);
+    }
 
     @Nullable
     @Override
@@ -37,6 +42,7 @@ public abstract class BaseFragment<V,P extends BasePresenter<V>> extends Fragmen
         mPresenter.attachView((V)this);
         initViews();
         initListeners();
+        initData();
     }
 
 
