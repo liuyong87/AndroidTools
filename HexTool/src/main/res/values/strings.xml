@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HexTool</string>
+    <string name="hex_string_text">请输入16进制字符串</string>
+    <string name="xor_result_text">XOR结果:</string>
+    <string name="btn_hex_to_xor_text">异或处理</string>
+    <string name="btn_clean_content_text">清除</string>
+</resources>
